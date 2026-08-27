@@ -1,0 +1,54 @@
+
+The Runtime AI Speech Sample project is using the following third party plugins and neural networks
+
+WhisperTiny Model
+
+License: apache-2.0 
+
+https://huggingface.co/openai/whisper-tiny
+
+@misc{radford2022whisper,
+  doi = {10.48550/ARXIV.2212.04356},
+  url = {https://arxiv.org/abs/2212.04356},
+  author = {Radford, Alec and Kim, Jong Wook and Xu, Tao and Brockman, Greg and McLeavey, Christine and Sutskever, Ilya},
+  title = {Robust Speech Recognition via Large-Scale Weak Supervision},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+decoder_model https://huggingface.co/unity/inference-engine-whisper-tiny/blob/main/models/decoder_model.onnx
+
+decoder_with_past_model https://huggingface.co/unity/inference-engine-whisper-tiny/blob/main/models/decoder_with_past_model.onnx
+
+encoder_model** | [`models/encoder_model.onnx`](https://huggingface.co/unity/inference-engine-whisper-tiny/blob/main/models/encoder_model.onnx
+
+logmel_spectrogram** | [`models/logmel_spectrogram.onnx`](https://huggingface.co/unity/inference-engine-whisper-tiny/blob/main/models/logmel_spectrogram.onnx
+
+**Vocab JSON**  https://huggingface.co/unity/inference-engine-whisper-tiny/blob/main/data/vocab.json
+
+
+Piper language models
+
+License: GPL-3.0 license
+
+https://github.com/OHF-Voice/piper1-gpl
+
+Trained language models on Hugging face
+
+License: MIT
+
+https://huggingface.co/rhasspy/piper-voices
+
+
+eSpeak NG
+
+License: https://github.com/espeak-ng/espeak-ng?tab=License-4-ov-file
+
+eSpeak NG is an open source speech synthesizer for phonemization https://github.com/espeak-ng/espeak-ng
+
+
+Note
+
+The sample is using additional Unity packages referenced in the project manifest.json
+
