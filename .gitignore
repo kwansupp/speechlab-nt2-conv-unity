@@ -50,6 +50,7 @@ Assets/Plugins.meta
 # Visual Studio cache directory
 .vs/
 .vscode/
+*.slnx
 
 # Gradle cache directory
 .gradle/
