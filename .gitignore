@@ -10,6 +10,14 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+*.DS_Store
+Assets/StreamingAssets/
+Assets/StreamingAssets.meta
+Assets/Data/
+Assets/Data.meta
+Assets/Plugins/
+Assets/Plugins.meta
+
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
