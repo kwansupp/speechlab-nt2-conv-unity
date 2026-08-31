@@ -12,6 +12,7 @@ public class TextToSpeech : SpeechBase
 {
 
     [Header("UI Components")]
+    [SerializeField] private TMP_Text dialogueDisplay;
     [SerializeField] private TMP_InputField textField;
 
     [Header("Voice Generation")]
@@ -57,10 +58,15 @@ public class TextToSpeech : SpeechBase
 
     public void Speak()
     {
-        if (textField == null || string.IsNullOrEmpty(textField.text))
+        if (dialogueDisplay == null || string.IsNullOrEmpty(dialogueDisplay.text))
             return;
 
-        Debug.Log($"Input text: {textField.text}");
+        Debug.Log($"Input text: {dialogueDisplay.text}");
+
+        //if (textField == null || string.IsNullOrEmpty(textField.text))
+        //    return;
+
+        //Debug.Log($"Input text: {textField.text}");
 
         // if (languageSelector != null)
         // {
@@ -78,7 +84,8 @@ public class TextToSpeech : SpeechBase
         //     }
         // }
         runPiper[runningPiperIndex]?.SetVoice();
-        runPiper[runningPiperIndex]?.SynthesizeAndPlay(textField.text);
+        //runPiper[runningPiperIndex]?.SynthesizeAndPlay(textField.text);
+        runPiper[runningPiperIndex]?.SynthesizeAndPlay(dialogueDisplay.text);
         
         synthesizeAndPlay = true;
     }
