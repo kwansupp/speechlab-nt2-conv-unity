@@ -723,7 +723,7 @@ PrefabInstance:
     - target: {fileID: 1270196259100120270, guid: a9d4f449079d74a1685178fc250f55fb, type: 3}
       propertyPath: modelAsset
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: ba5184d957c50854b9e66f023ac71e53, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 9b24fdfdf70414ac996d98bc5fbbbd1c, type: 3}
     - target: {fileID: 3888986987811021479, guid: a9d4f449079d74a1685178fc250f55fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.26789
@@ -767,7 +767,7 @@ PrefabInstance:
     - target: {fileID: 4764943374391315999, guid: a9d4f449079d74a1685178fc250f55fb, type: 3}
       propertyPath: jsonFile
       value: 
-      objectReference: {fileID: 4900000, guid: b1668197cdb70e244b68f03ea89ad7c0, type: 3}
+      objectReference: {fileID: 4900000, guid: 7a4c0a4e798904ee9b1957b87bec9b7f, type: 3}
     - target: {fileID: 5633898127721789434, guid: a9d4f449079d74a1685178fc250f55fb, type: 3}
       propertyPath: m_Name
       value: TextToSpeech
