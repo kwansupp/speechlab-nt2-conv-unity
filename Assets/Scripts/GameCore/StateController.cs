@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class StateController : MonoBehaviour
 {
-    IState currentState;
+    IGameState currentState;
 
     void Update()
     {
         currentState.UpdateState();
     }
 
-    public void ChangeState(IState newState)
+    public void ChangeState(IGameState newState)
     {
         currentState.OnExit();
         currentState = newState;
@@ -17,7 +17,7 @@ public class StateController : MonoBehaviour
     }
 }
 
-public interface IState
+public interface IGameState
 {
     public void OnEnter();
 
