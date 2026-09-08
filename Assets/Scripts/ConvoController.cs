@@ -2,7 +2,7 @@ using UnityEngine;
 using LLMUnity;
 using TMPro;
 
-public class ConversationTrigger : MonoBehaviour
+public class ConvoController : MonoBehaviour
 {
     public GameObject convoAvatar;
     public GameObject uiObject;
