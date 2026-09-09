@@ -4,6 +4,7 @@ using TMPro;
 
 public class ConvoController : MonoBehaviour
 {
+    public StateController stateController;
     public GameObject convoAvatar;
     public GameObject uiObject;
     public TMP_Text dialogueDisplay;
@@ -25,8 +26,10 @@ public class ConvoController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // change game state to convo state
+            stateController.ChangeState(stateController.convoState);
             // start convo - show text to click
-            StartConvo();
+            // StartConvo();
         }
     }
 
@@ -44,12 +47,9 @@ public class ConvoController : MonoBehaviour
 
     }
 
-    private void StartConvo()
+    public void StartConvo()
     {
         Debug.Log("Start convo, launching convo mode");
-
-        // make UI object active
-        uiObject.SetActive(true);
 
         // LLM call
         Converse("Een student komt naar jouw toe, hoi zeggen, en begin het gesprek.");
@@ -60,7 +60,8 @@ public class ConvoController : MonoBehaviour
     void HandleReply(string replySoFar)
     {
         // do something with the reply from the model as it is being produced
-        Debug.Log(replySoFar);
+        // Debug.Log(replySoFar);
+        // Debug.Log("LLM replying...");
         // push text to game UI
         dialogueDisplay.text = replySoFar;
     }

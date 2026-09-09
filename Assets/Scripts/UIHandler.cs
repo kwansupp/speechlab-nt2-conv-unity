@@ -3,9 +3,20 @@ using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
+    [SerializeField] private GameObject conversationUI;
     // for voice input STT
     [SerializeField] private GameObject voiceInputButton;
     [SerializeField] private SpeechToText speechToText;
+
+    public void ShowConvoUI()
+    {
+        conversationUI.SetActive(true);
+    }
+
+    public void HideConvoUI()
+    {
+        conversationUI.SetActive(false);
+    }
 
     public void StartOrStopRecording()
     {
