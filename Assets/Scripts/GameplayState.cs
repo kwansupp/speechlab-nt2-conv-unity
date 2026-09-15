@@ -8,10 +8,8 @@ public class GameplayState : IGameState
         sc.player.SetActive(true);
         
         // deactivate conversation camera
-
         // hide UI
         sc.uiHandler.HideConvoUI();
-        
     }
 
     public void UpdateState(StateController sc)

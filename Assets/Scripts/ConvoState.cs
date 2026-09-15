@@ -5,10 +5,10 @@ public class ConvoState : IGameState
 {
     public void OnEnter(StateController sc)
     {
+        // activate conversation camera
+        sc.cameraController.EnterConversation();
         // disable / hide player
         sc.player.SetActive(false);
-        // activate conversation camera
-
         // show UI
         sc.uiHandler.ShowConvoUI();
         // start LLM convo
@@ -28,6 +28,9 @@ public class ConvoState : IGameState
 
     public void OnExit(StateController sc)
     {
+        // hide UI
+        sc.uiHandler.HideConvoUI();
         // end conversation mode
+        sc.cameraController.ExitConversation();
     }
 }

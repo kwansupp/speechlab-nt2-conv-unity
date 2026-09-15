@@ -389,6 +389,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &95701098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95701099}
+  m_Layer: 0
+  m_Name: ConvoView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95701099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95701098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.07605156, y: -0.13271621, z: 0.010213779, w: 0.9881793}
+  m_LocalPosition: {x: 0.23, y: 1.84, z: -2.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1476265999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &112745648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -524,6 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StateController
   uiHandler: {fileID: 1922830655}
   convoController: {fileID: 1878323394}
+  cameraController: {fileID: 330585548}
   player: {fileID: 1138363549}
 --- !u!4 &151443857 stripped
 Transform:
@@ -1129,6 +1161,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1203,11 +1236,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.022912383, y: -0, z: -0, w: 0.9997375}
+  m_LocalRotation: {x: 0.022912383, y: 0, z: 0, w: 0.9997375}
   m_LocalPosition: {x: -0.06, y: 2.463, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 618301249}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 2.626, y: 0, z: 0}
 --- !u!114 &330585547
@@ -1254,6 +1288,21 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a80178b32a84c7389cb9f66c50ae8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
+  gameplayView: {fileID: 422070158}
+  convoView: {fileID: 95701099}
+  speed: 3
 --- !u!114 &335747728 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6129691401356974917, guid: a9d4f449079d74a1685178fc250f55fb, type: 3}
@@ -1392,6 +1441,37 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &422070157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422070158}
+  m_Layer: 0
+  m_Name: GameplayView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422070158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422070157}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.022912383, y: -0, z: -0, w: 0.9997375}
+  m_LocalPosition: {x: -0.06, y: 2.463, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1476265999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &475653467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1854,7 +1934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618301249}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ConvoUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,13 +1949,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618301248}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31593, y: 0.82394, z: -3.2}
+  m_LocalRotation: {x: 0.053390052, y: -0.13244733, z: 0.013251941, w: 0.98966235}
+  m_LocalPosition: {x: -0.20852, y: -0.15180826, z: 14.495883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1922830654}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 330585546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &636064271 stripped
 MonoBehaviour:
@@ -3032,6 +3112,39 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425571453}
   m_Enabled: 1
+--- !u!1 &1476265998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476265999}
+  m_Layer: 0
+  m_Name: CameraPositions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1476265999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476265998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 422070158}
+  - {fileID: 95701099}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1523263106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3703337263095747695, guid: c0eb883bd26d649448815aba284af5a2, type: 3}
@@ -3293,6 +3406,10 @@ PrefabInstance:
     - target: {fileID: 5871175793189258553, guid: 381e936f22ce3469b8fa38445f2d466f, type: 3}
       propertyPath: m_Name
       value: FrequencyBandRenderer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871175793189258553, guid: 381e936f22ce3469b8fa38445f2d466f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8444867358433888677, guid: 381e936f22ce3469b8fa38445f2d466f, type: 3}
       propertyPath: m_LocalScale.x
@@ -3729,7 +3846,7 @@ Canvas:
   m_GameObject: {fileID: 1922830650}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 330585545}
   m_PlaneDistance: 5
   m_PixelPerfect: 0
@@ -4072,6 +4189,6 @@ SceneRoots:
   - {fileID: 60308488}
   - {fileID: 703594555}
   - {fileID: 68394928}
-  - {fileID: 618301249}
   - {fileID: 2109152666}
   - {fileID: 250760878}
+  - {fileID: 1476265999}

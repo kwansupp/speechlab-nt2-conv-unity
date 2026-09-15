@@ -6,6 +6,7 @@ public class StateController : MonoBehaviour
 
     public UIHandler uiHandler;
     public ConvoController convoController;
+    public CameraController cameraController;
     public GameObject player;
     
     public GameplayState gameplayState = new GameplayState();
