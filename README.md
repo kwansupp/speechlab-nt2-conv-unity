@@ -52,12 +52,10 @@ The ConvoController manages the flow of the conversation, and how data flows bet
 ![Components_LLM](Screenshots/Components_LLM.png)
 
 - LLMAgent, handles chat settings for LLM.
-
-![Components_LLMAgent](Screenshots/Components_LLMAgent.png)
+    ![Components_LLMAgent](Screenshots/Components_LLMAgent.png)
 
 - SpeechToText
-
-![Components_SpeechToText](Screenshots/Components_SpeechToText.png)
+    ![Components_SpeechToText](Screenshots/Components_SpeechToText.png)
 
 - TextToSpeech
     ![Components_TextToSpeech](Screenshots/Components_TextToSpeech.png)
