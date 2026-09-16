@@ -1,6 +1,7 @@
 # speechlab-nt2-conv-unity
 
 A 3d environment for pedagogically testing Dutch NT2 conversations.
+
 For the preset environment on SpeechLab Windows laptop, view User Guide here: https://uva.works.surf.nl/s/x59qJDGzCSBjMTS
 
 ## setup
@@ -59,16 +60,13 @@ The ConvoController manages the flow of the conversation, and how data flows bet
 ![Components_SpeechToText](Screenshots/Components_SpeechToText.png)
 
 - TextToSpeech
-
-![Components_TextToSpeech](Screenshots/Components_TextToSpeech.png)
+    ![Components_TextToSpeech](Screenshots/Components_TextToSpeech.png)
 
 - TextToSpeech > RunPiper (nl)
-
-![Components_RunPiper](Screenshots/Components_RunPiper.png)
+    ![Components_RunPiper](Screenshots/Components_RunPiper.png)
 
 - Main Camera, has a camera controller, which animates between GameplayView and ConvoView
-
-![Components_MainCamera](Screenshots/Components_MainCamera.png)
+    ![Components_MainCamera](Screenshots/Components_MainCamera.png)
 
 - Main Camera > ConvoUI > Canvas
 The settings for the UI components can be found here.
