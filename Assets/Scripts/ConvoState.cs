@@ -28,8 +28,6 @@ public class ConvoState : IGameState
 
     public void OnExit(StateController sc)
     {
-        // hide UI
-        sc.uiHandler.HideConvoUI();
         // end conversation mode
         sc.cameraController.ExitConversation();
     }
