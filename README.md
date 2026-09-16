@@ -1,6 +1,7 @@
 # speechlab-nt2-conv-unity
 
 A 3d environment for pedagogically testing Dutch NT2 conversations.
+For the preset environment on SpeechLab Windows laptop, view User Guide here: https://uva.works.surf.nl/s/x59qJDGzCSBjMTS
 
 ## setup
 1. clone this repository
@@ -13,7 +14,7 @@ A 3d environment for pedagogically testing Dutch NT2 conversations.
 7. attach Whisper model files to SpeechToText object (under Run Whisper Tiny) and Piper models to TextToSpeech, if necessary.
 
 ## LLM config
-Update prompt for Convo Agent under LLMAgent chat settings.
+Update prompt for Convo Agent under LLMAgent chat settings. Refer to prompts from here: https://github.com/arneeichholtz/nt2-conv/tree/main/prompts
 
 ## player controls
 In play mode, move the player around the environment with arrowkeys or 'WASD'. Move towards the conversational avatar to trigger 'Convo Mode', which will lock the camera on the character and make the UI appear.
