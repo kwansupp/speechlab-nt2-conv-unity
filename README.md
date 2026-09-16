@@ -41,15 +41,15 @@ The ConvoController manages the flow of the conversation, and how data flows bet
 
 ![Components_ConvoAvatar](Screenshots/Components_ConvoAvatar.png)
 
-- Player_Avatar
+- Player_Avatar has a controller script that allows for keyboard input to controller player actions.
 
 ![Components_PlayerAvatar](Screenshots/Components_PlayerAvatar.png)
 
-- LLM
+- LLM, this is where UndreamAI API is loaded. LLM models can be downloaded and selected under Model Settings.
 
 ![Components_LLM](Screenshots/Components_LLM.png)
 
-- LLMAgent
+- LLMAgent, handles chat settings for LLM.
 
 ![Components_LLMAgent](Screenshots/Components_LLMAgent.png)
 
@@ -65,6 +65,16 @@ The ConvoController manages the flow of the conversation, and how data flows bet
 
 ![Components_RunPiper](Screenshots/Components_RunPiper.png)
 
+- Main Camera, has a camera controller, which animates between GameplayView and ConvoView
+
+![Components_MainCamera](Screenshots/Components_MainCamera.png)
+
+- Main Camera > ConvoUI > Canvas
+The settings for the UI components can be found here.
+`StatusDisplay` shows the status message for the different controls while in ConvoMode.
+`Entry > TextInput` is where text input is received, more specifically `Text Area`. `Record` object contains the icon image for recording, as well as UI handling for when icon is clicked, to start/stop recording for speech to text.
+`DialogueDisplay` contains the UI components for responses received from the LLMAgent. `Speak` object contains the icon image and button event handling for text to speech feature.
+`FrequencyBandRenderer` is a feature for when recording audio, to give visual feedback on frequency that is being recorded.
 
 ## dependencies
 LLM implementation via LLMUnity (v3.0.3) package: https://github.com/undreamai/LLMUnity
